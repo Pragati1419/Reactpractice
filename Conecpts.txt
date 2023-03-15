@@ -1,0 +1,145 @@
+import React from "react";
+import React from "react";
+import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
+
+React is a component based as well as Declarative approach.
+DOM(Document object Model)
+
+Package.json - Meta data for the package
+
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop
+
+      ReactDOM.render('Kya dikhana h ','Khan dikhana h','callback function');
+
+      Bable is Modern Javascript compiler that comes with import function
+
+
+JSX - Javascript XMl
+
+JSX allows us to write HTML in React.
+JSX makes it easier to write and add HTML to React.
+JSX is an extension of the JavaScript language based on ES6 and is translated into regular JavaScript at runtime.
+
+
+Q . Why import React module in JSX ?
+
+ans : To use HTML
+
+
+Q.How to Render Multiple Elements inside ReactDOM.render() method in React JS
+Ans: In React, we can only render one element. Even if we have multiple elements to render, there can only be a single root element. This means if we want to render two or more elements, 
+we have to wrap them in another element or component. Commonly, the element used for this is a div tag.
+
+
+
+What are React Fragments?
+
+React Fragments allow you to wrap or group multiple elements without adding an extra node to the DOM.
+This can be useful when rendering multiple child elements/components in a single parent component.
+       we had used div tag to wrap multiple elements, This workaround works for most cases, but sometimes adding an extra DOM element is not feasible.
+
+The solution is reacted fragment that allows you to wrap multiple elements without adding an extra DOM element and it has syntactic sugar form as using an empty tag ().
+
+
+Q.Create app to add five netflix series
+
+
+ReactDOM.render(
+  <>
+  
+    <h1>5 best Netflix Series</h1> 
+   <p>Here are my favourite netflix series</p>
+   <ol>
+   <li>Harry Porter</li>
+    <li>Dark</li>
+    <li>Lovestory</li>
+    <li>Vampire Daries</li>
+    <li>Stranger things</li>
+   </ol>
+  
+   </>,
+   document.getElementById('root')
+ 
+   );
+
+
+ Q. what are JSX Expressions in React Js in Hindi?
+Ans :  JSX is an Expression Too After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects. Embedding Expressions in JSX in ReactJS in Hindi. 
+You can put any valid JavaScript expression inside the curly braces in JSX. With JSX you can write expressions inside curly braces { }. The expression can be a React variable, property, or any other valid JavaScript expression.
+
+Q.how to use es6 template literals in JSX in React JS ?
+Template literals are string literals allowing embedded expressions inside JSX in React. You can use multi-line strings and string interpolation features with them. 
+
+## Challange 1
+Display your name , Date and time in the website 
+
+
+const name ="Pragtai";
+const CurrentDate = new Date().toLocaleDateString();
+const CurrentTime = new Date().toLocaleTimeString();
+ReactDOM.render(
+  <>
+  
+    <h1>Hello , My Name is {name}</h1> 
+    <p>Today's Date is = {CurrentDate}</p>
+    <p>Current Time is = {CurrentTime}</p>
+   </>,
+   document.getElementById('root')
+ 
+   );
+  
+
+Q.  Diffrenece between Class ans className and class ?
+
+
+Te only reason behind the fact that it uses className over class is that the class is a reserved keyword in JavaScript and since we use JSX in React which itself is the extension of JavaScript, we have to use className instead of the class attribute.
+
+
+#Challange 2
+
+
+let currDate = new Date();
+currDate = currDate.getHours();
+let greeting = " ";
+
+const cssStyle = {};
+
+if(currDate >=1 && currDate < 12){
+   greeting = 'Good Morning';
+   cssStyle.color = "green";
+}
+else if(currDate >=12 && currDate < 19){
+    greeting = 'Good Afternoon';
+    cssStyle.color = "orange";
+}
+else{
+    greeting = 'Good Night';
+    cssStyle.color = "Grey";
+}
+
+ReactDOM.render(
+   <h1>Hello Sir  ,<span style ={cssStyle} >{greeting}</span></h1> ,
+   document.getElementById("root")
+
+);  
+
+
+Components in React 
+ In React components are the building blocks of any React app. Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and returns HTML via a render function.
+Components come in two types, Class components, and Function components
+
+
+what is ES6 Import Export Modules in React JS\
+Ans :  ES6 provides two ways to export a module from a file: named export and default export. 
+With named exports, one can have multiple named exports per file. Then import the specific exports
+ they want to be surrounded in braces. 
+The name of the imported module has to be the same as the name of the exported module.
+
+The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark ( ? ), then an expression to execute if the condition is truthy followed by a colon ( : ), and finally the expression to execute if the condition is false. 
+
+What is React Controlled Vs Uncontrolled Component? 
+
+Ans: In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, where form data is handled by the DOM itself. To write an uncontrolled component, 
+instead of writing an event handler for every state update, you can use a ref to get form values from the DOM.
